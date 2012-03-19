@@ -8,5 +8,8 @@ A simple interface for consuming tweets using Twitter's streaming API with the e
 * [Set up a Twitter application](https://dev.twitter.com/apps/new)
 * Input your application auth into app.js and you're set.
 
+### Libraries used:
+* [node-oauth](https://github.com/ciaranj/node-oauth) by [Ciaran Jessup](https://github.com/ciaranj)
+
 ### Thanks to:
 [Andre Goncalves](https://github.com/andregoncalves/) and [Eric Dennis](https://github.com/threetee) for creating similar apps that helped me think through this.
