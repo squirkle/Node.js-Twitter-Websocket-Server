@@ -1,69 +1,18 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Who's The Shit?</title>
-		<link href="http://dev_challenge.pallen.mouse.engauge.com/css/style.css" rel="stylesheet" />
-		<style>
-		html {
-			text-align:center;
-			font-size:45px;
-			color:#000;
-		}
-		h1 {
-			font-size:1.5em;
-			color:#777;
-		}
-		h6 {
-			margin:1em 0;
-			color:#bada55;
-		}
-		</style>
-		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
-		<script src="http://dev_challenge.pallen.mouse.engauge.com/js/d3.js"></script>
+		<title>Twitter Stream</title>
 		<script src="/socket.io/socket.io.js"></script>
-		<script type="text/javascript" src="http://use.typekit.com/fah0qzx.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		<script>
-			var socket = io.connect('http://ec2-67-202-6-10.compute-1.amazonaws.com');			
+			var socket = io.connect(/* your domain */);			
 		</script>
 	</head>
 	<body>
-		<h1>Mentions of Presidential Candidates on Twitter</h1>
-		<h6>(IN REAL TIME)</h6>
-		<div id="rect-demo">
-		</div>
 	
 		<script>
-	        // initialization code
-	        var twitterStream = d3.select("#rect-demo").
-	        	append("svg:svg").
-	        	attr("width", 400).
-	        	attr("height", 300);
-	
-	        twitterStream.append("circle").
-	        	attr("cx", 100).
-	        	attr("cy", 100).
-	        	attr("r", 15).
-	        	style('fill', 'steelblue');
-
-	        twitterStream.append("circle").
-	        	attr("cx", 150).
-	        	attr("cy", 100).
-	        	attr("r", 15).
-	        	style('fill', 'indianred');
-
-	        var circles = twitterStream.selectAll("circle");
-	        console.log(circles);
-	
-	
-				var Obama = Romney = Santorum = Gingrich = Paul = {};
-	
-				socket.on('tweet', function (tweet) {
-
-					if(tweet.text.match(/Obama/gi)){
-						
-					}
-				});
-	</script>
+			socket.on('tweet', function (tweet) {
+				// do your thing
+			});
+		</script>
 	</body>
 </html>
