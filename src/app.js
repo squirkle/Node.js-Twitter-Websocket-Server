@@ -14,7 +14,7 @@
 		access_token_secret : ''
 	});
 	websocketServer.init({
-		port : 8081 /* or whatever */
+		port : 80 /* or whatever */
 	})
 
 	// makeEmitter(name) returns a function where {name} is the name of the socket.io event 
@@ -22,6 +22,9 @@
 	twitterFeed.onResponse(function(response){
 		emitTweet(response);
 	})
+	websocketServer.onConnect(function(client){
+		client.emit('userConnect', { "hello" : "user" })
+	});
 
 	twitterFeed.setMethod('track');
 	twitterFeed.addKeywords(['Puppies','Kittens']);

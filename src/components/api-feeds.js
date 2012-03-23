@@ -51,7 +51,7 @@ exports.twitterFeed = function(){
 	this.addKeywords = function(key){
 		if(key instanceof Array){
 			key.each(function(keyString){
-				keywords.push(key);
+				keywords.push(keyString);
 			})
 		} else {
 			keywords.push(key);

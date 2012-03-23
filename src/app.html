@@ -10,8 +10,11 @@
 	<body>
 	
 		<script>
-			socket.on('tweet', function (tweet) {
+			socket.on('tweet', function(tweet) {
 				// do your thing
+			});
+			socket.on('userConnect', function(msg) {
+				console.log(msg);
 			});
 		</script>
 	</body>

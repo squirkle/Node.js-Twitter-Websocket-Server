@@ -62,7 +62,7 @@ exports.websocketServer = function(){
 			// on client connection: run onConnect() and onDisconnect() callbacks below
 			io.sockets.on('connection', function(socket){
 				
-				callbacks.do('onConnect');
+				callbacks.do('onConnect')(socket);
 	
 				clients.push(socket);
 	
