@@ -1,0 +1,8 @@
+{
+  "description" : "A simple bootstrap app for live-streamed twitter applications on Node.js",
+  "dependencies" : {
+    "ws-server" : "git://github.com/squirkle/ws-server",
+    "twitter-stream" : "git://github.com/squirkle/twitter-stream.git",
+    "twitter-link" : "git://github.com/squirkle/twitter-link.git"
+  }
+}
