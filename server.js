@@ -4,17 +4,17 @@ var WebsocketServer = require('ws-server'),
     TwitterLink = require('twitter-link'),
     TwitterStream = require('twitter-stream'),
 
-  stream = new TwitterStream({
-    auth : {
-      consumer_key : "...",
-      consumer_secret : "...",
-      access_token : "...",
-      access_token_secret : "..."
-    },
-    method : "track",
-    keywords : ['puppies', 'kittens'],
-    onResponse : ws.makeEmitter('tweet')
-  });
+    stream = new TwitterStream({
+      auth : {
+        consumer_key : "...",
+        consumer_secret : "...",
+        access_token : "...",
+        access_token_secret : "..."
+      },
+      method : "track",
+      keywords : ['puppies', 'kittens'],
+      onResponse : ws.makeEmitter('tweet')
+    });
 
 // Start websocket server
 ws.start();
